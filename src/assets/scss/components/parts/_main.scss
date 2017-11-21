@@ -1,0 +1,141 @@
+.main {
+  width: 100%;
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(md) {
+      flex-direction: row;
+    }
+  }
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  &__menu{
+    padding: 19px 32px 12px 13px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__advirtisment{
+     width: 100%;
+     height: 134px;
+     margin-bottom: 20px;
+  }
+}
+@include breakpoint(md) {
+  .nav {
+    margin-right: 3%;
+    width: 20%;
+
+    &__menu{
+      margin-bottom: 10%;
+    }
+    &__advirtisment{
+      width: 100%;
+      height: 134px;
+      margin-bottom: 0;
+    }
+  }
+}
+.menu__item {
+  list-style: none;
+}
+.menu__link--active {
+  font-weight: 900;
+}
+
+.content {
+  width: 100%;
+  color: #777777;
+  @include breakpoint(md) {
+    width: 78%;
+  }
+}
+
+.content__task {
+  width: 100%;
+  background-color: #dcdcdc;
+  padding: 18px;
+}
+.task__listDfn {
+  padding: 21px 0 24px 40px;
+}
+
+.listPort {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3%;
+}
+
+.listPort__item {
+  list-style: none;
+  height: 152px;
+  background-color: #dcdcdc;
+  width: 92%;
+  margin: 20px;
+}
+
+@include breakpoint(md) {
+
+  .listPort {
+    flex-direction: row;
+    padding: 0;
+    margin:  20px 0 0 0;
+  }
+
+  .listPort__item {
+    width: 48%;
+    margin: 0 4% 20px 0;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+@include breakpoint(lg) {
+
+  .listPort {
+    padding: 0;
+  }
+
+  .listPort__item {
+    width: 17%;
+    margin: 0 3.75% 20px 0;
+    &:nth-child(2n) {
+      margin-right: 3.75%;
+    }
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.content__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.description__text{
+  width: 100%;
+  background-color: #dcdcdc;
+  padding: 23px 18px 32px;
+  color: #777777;
+  line-height: 17px;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+@include breakpoint(md) {
+  .content__description {
+    flex-direction: row;
+  }
+  .description__text{
+    width: 48.2%;
+    margin-bottom: 0;
+  }
+}
